@@ -1,0 +1,49 @@
+﻿"LOCATION"	"Country"	"VARIABLE"	"Variable"	"FREQUENCY"	"Frequency"	"TIME"	"Time"	"Unit Code"	"Unit"	"PowerCode Code"	"PowerCode"	"Reference Period Code"	"Reference Period"	"Value"	"Flag Codes"	"Flags"
+"AUS"	"Australia"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2016_17"	"2016-17"	-4.98813034813566		
+"AUT"	"Austria"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2010"	"2010"	-6.20670521296688		
+"BEL"	"Belgium"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2015"	"2015"	-8.92384361514149		
+"CAN"	"Canada"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2012"	"2012"	-7.96978476733094		
+"CZE"	"Czech Republic"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2010"	"2010"	-9.58740550283853		
+"DNK"	"Denmark"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2010"	"2010"	-5.78484654596337		
+"FIN"	"Finland"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2010"	"2010"	-7.87845603146406		
+"FRA"	"France"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2014"	"2014"	-11.3769860364554		
+"DEU"	"Germany"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2015"	"2015"	-6.60226105396361		
+"GRC"	"Greece"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2010"	"2010"	-7.99496411338092		
+"HUN"	"Hungary"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2005"	"2005"	-7.98658838331927		
+"ISL"	"Iceland"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2005"	"2005"	-9.91557266305462		
+"IRL"	"Ireland"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2017"	"2017"	-6.79487297859693		
+"ITA"	"Italy"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2010"	"2010"	-11.2766663375498		
+"JPN"	"Japan"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2011"	"2011"	-6.04986132611869		
+"KOR"	"Korea"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2015"	"2015"	-1.22937055581248		
+"LUX"	"Luxembourg"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2010"	"2010"	-6.49753172597918		
+"MEX"	"Mexico"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2013"	"2013"	-7.54304976387498		
+"NLD"	"Netherlands"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2015"	"2015"	-8.01598523951021		
+"NZL"	"New Zealand"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2009_10"	"2009-10"	-8.86987196416215		
+"POL"	"Poland"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2010"	"2010"	-7.44302104996919		
+"PRT"	"Portugal"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2016"	"2016"	-9.354635748397		
+"SVK"	"Slovak Republic"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2010"	"2010"	-9.2849476724907		
+"ESP"	"Spain"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2015"	"2015"	-11.1371651651808		
+"SWE"	"Sweden"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2017"	"2017"	-6.68256613399719		
+"CHE"	"Switzerland"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2010"	"2010"	-7.70723189171419		
+"TUR"	"Turkey"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2009"	"2009"	-4.80171191116672		
+"GBR"	"United Kingdom"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2016"	"2016"	-11.4976658356624		
+"USA"	"United States"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2012"	"2012"	-7.30469395023191		
+"OTO"	"OECD - Total"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2015"	"2015"	-7.54300380450192		
+"BRA"	"Brazil"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2000"	"2000"	-7.44313430940871		
+"CHL"	"Chile"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2013"	"2013"	-5.56335768336633		
+"CHN"	"China (People's Republic of)"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2015"	"2015"	-2.63222181257736		
+"COL"	"Colombia"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2015"	"2015"	-6.12844991469798		
+"CRI"	"Costa Rica"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2012"	"2012"	-4.08608719711939		
+"EST"	"Estonia"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2015"	"2015"	-8.37402604364446		
+"IND"	"India"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2011_12"	"2011-12"	-3.7204304359347		
+"IDN"	"Indonesia"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2010"	"2010"	-2.76409784890567		
+"ISR"	"Israel"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2015"	"2015"	-6.15633024722534		
+"LVA"	"Latvia"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2015"	"2015"	-8.06266880611148		
+"RUS"	"Russia"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2016"	"2016"	-8.03119088931574		
+"SVN"	"Slovenia"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2010"	"2010"	-7.81764904037028		
+"ZAF"	"South Africa"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2010"	"2010"	-7.46202840577889		
+"WLD"	"World"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2015"	"2015"	-5.98047923374036		
+"LTU"	"Lithuania"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2015"	"2015"	-8.07539486489354		
+"ARG"	"Argentina"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2004"	"2004"	-8.34858588166183		
+"NOR"	"Norway"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2017"	"2017"	-5.98868226652746		
+"EA17"	"Euro area (17 countries)"	"GDPV_ANNPCT"	"Gross domestic product, volume, growth"	"A"	"Annual"	"2020"	"2020"	"PC"	"Percentage"	"0"	"Units"	"2015"	"2015"	-9.07344728459434		
