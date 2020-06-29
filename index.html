@@ -23,10 +23,10 @@
         <h2>Share of dependent employees</h2>
         <img id="Share" src="img/share.svg" alt="share">
 
-    <div class="flex-container" id="Downloadbanner">
+    <!--<div class="flex-container" id="Downloadbanner">
         <button class="toData active" id="OECDbtn" onclick="drawChart(value)" value="OECD">OECD</button>
         <button class="toData" id="WORLDbtn" onclick="drawChart(value)" value="WORLD">World</button>
-    </div>
+    </div>-->
         <div id="GDPchart"></div>
         <div id="source" class="source">Source: <a class="source" href="https://doi.org/10.1787/1686c758-en" target="_blank">OECD (2020), OECD Employment Outlook
             2020: Worker Security and the COVID-19 Crisis, OECD Publishing, Paris.</a></div><div id="shareLink">
@@ -45,7 +45,7 @@
     </body>
     <script>
         var dataPerm=[];
-        var valueButton="OECD"
+        var valueButton="WORLD"
         var G7list=["CAN","FRA","DEU","ITA","JPN","GBR","USA","EA17"] 
         var OECDlist=["AUS", "AUT", "BEL", "CAN,", "CHL", "COL", "CZE", "DNK", "EST", "FIN", "FRA", "DEU", "GRC", "HUN", "ISL", "IRL", "ISR", "ITA", "JPN", "KOR", "LVA", "LTU", "LUX", "MEX", "NLD", "NZL", "NOR", "POL", "PRT", "SVK", "SVN", "ESP", "SWE", "CHE", "TUR", "GBR", "USA", "OTO"]
         
@@ -260,8 +260,12 @@
                 divMap.transition()
                     .duration(100)
                     .style("opacity", 1);
-
-                var htmlText =  "<b>" + d.data.Country + "</b><br/>&nbsp;Approved applications: <b>" + d.data.data1  + "%</b> <br>&nbsp;Actual use :<b>" + d.data.Actual_use + "%</b>  <br>&nbsp;Head counts :<b>" + d.data.headcount ;
+                
+                var htmlText
+                if(d.data.Actual_use=="#N/A")
+                    htmlText =  "<b>" + d.data.Country + "</b><br/>&nbsp;Approved applications: <b>" + d.data.data1  + "%</b> <br>&nbsp;Head counts :<b>" + d.data.headcount ;
+                else
+                    htmlText = "<b>" + d.data.Country + "</b><br/>&nbsp;Approved applications: <b>" + d.data.data1 + "%</b> <br>&nbsp;Actual use :<b>" + d.data.Actual_use + "%</b>  <br>&nbsp;Head counts :<b>" + d.data.headcount;
 
                 if (event.pageX < width - 75) {
                     divMap.html(htmlText)
