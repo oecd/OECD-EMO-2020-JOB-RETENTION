@@ -19,14 +19,14 @@
     </head>
 
     <body>
-        <h1>Job retention schemes</h1><br>
-        <h2>Share of dependent employees</h2>
+        <h1>Job retention programmes</h1><br>
+        <h2>As % of dependent employees</h2>
         <img id="Share" src="img/share.svg" alt="share">
 
-    <!--<div class="flex-container" id="Downloadbanner">
-        <button class="toData active" id="OECDbtn" onclick="drawChart(value)" value="OECD">OECD</button>
-        <button class="toData" id="WORLDbtn" onclick="drawChart(value)" value="WORLD">World</button>
-    </div>-->
+    <div class="flex-container" id="Downloadbanner">
+        <button class="toData active" id="OECDbtn" onclick="drawChart(value)" value="Actual_use">Actual use of job retention programmes</button>
+        <button class="toData" id="WORLDbtn" onclick="drawChart(value)" value="Approved_applications">Approved applications</button>
+    </div>
         <div id="GDPchart"></div>
         <div id="source" class="source">Source: <a class="source" href="https://doi.org/10.1787/1686c758-en" target="_blank">OECD (2020), OECD Employment Outlook
             2020: Worker Security and the COVID-19 Crisis, OECD Publishing, Paris.</a></div><div id="shareLink">
@@ -34,10 +34,10 @@
                 <img id="shuttershare" src="img/cross.svg">
                 <div id="trackersText">
                     <b>Copy link:</b><Br />
-                    <span>https://oecd.github.io/EO-Outlook_chart_3/</span><Br />
+                    <span>https://oecd.github.io/OECD-EMO-2020-JOB-RETENTION/</span><Br />
                     <b>Embed link:</b><Br />
                     <textarea
-                        readonly><iframe src="https://oecd.github.io/EO-Outlook_chart_3/" width="100%" height="500px" style="border:none;"></iframe></textarea>
+                        readonly><iframe src="https://oecd.github.io/OECD-EMO-2020-JOB-RETENTION/" width="100%" height="500px" style="border:none;"></iframe></textarea>
         
                 </div>
             </div>
@@ -45,20 +45,14 @@
     </body>
     <script>
         var dataPerm=[];
-        var valueButton="WORLD"
-        var G7list=["CAN","FRA","DEU","ITA","JPN","GBR","USA","EA17"] 
-        var OECDlist=["AUS", "AUT", "BEL", "CAN,", "CHL", "COL", "CZE", "DNK", "EST", "FIN", "FRA", "DEU", "GRC", "HUN", "ISL", "IRL", "ISR", "ITA", "JPN", "KOR", "LVA", "LTU", "LUX", "MEX", "NLD", "NZL", "NOR", "POL", "PRT", "SVK", "SVN", "ESP", "SWE", "CHE", "TUR", "GBR", "USA", "OTO"]
+        var valueButton="Actual_use"
         
-        var keys= ["data1", "diff"]
+        var keys= ["approved", "diff"]
 
     var divMap = d3.select("body").append("div")
         .attr("class", "tooltip")
         .style("opacity", 0);
 
-
-    var color = d3.scaleOrdinal()
-        .domain(keys)
-        .range([ "#00b5cb", "#851017"])
 
   
     var margin = { top: 10, right: 50, bottom: 80, left: 50 };
@@ -69,19 +63,17 @@
 
     var height;
     if (width > 650)
-        height=360//height = width * mapRatio;
+        height=450//height = width * mapRatio;
     else
-        height = 360//height = width;
+        height = 450//height = width;
 
 
     var urls = {
         data1: "data/data1.tsv",
-        data2: "data/data2.tsv",
     };
 
     d3.queue()
         .defer(d3.tsv, urls.data1)
-        .defer(d3.tsv, urls.data2)
         .await(render);
 
     var GDPsvg= d3.select("#GDPchart").append("svg")
@@ -103,24 +95,20 @@
         .rangeRound([height-margin.bottom, margin.top]);
 
 
-    function render(err, Data1, Data2) {
+    function render(err, Data1) {
         var count=0
         Data1.forEach(function (d) {
             count++
-            Data2.forEach(function (k) {
-                if(k.LOCATION==d.LOCATION){
                     
-
-                    var countryName=d.Country;
-                    if(d.Country== "China (People's Republic of)")
-                        countryName="China"
-                    if (d.Country == "OECD - Total")
-                        countryName = "OECD"
-                    if (d.Country == "Euro area (17 countries)")
-                        countryName = "Euro area"
-                    dataPerm.push({ "Country": countryName, "ISO": d.LOCATION, "data1":d.Approved_applications, "data2":k.Approved_applications, "Actual_use": d.Actual_use,"headcount":d.Headcounts})
-                }
-            })
+            var countryName=d.Country;
+            if(d.Country== "China (People's Republic of)")
+                countryName="China"
+            if (d.Country == "OECD - Total")
+                countryName = "OECD"
+            if (d.Country == "Euro area (17 countries)")
+                countryName = "Euro area"
+            dataPerm.push({ "Country": countryName, "ISO": d.LOCATION, "Approved_applications":d.Approved_applications,  "Actual_use": d.Actual_use,"headcount":d.Headcounts})
+  
             if(count== Data1.length)
                 drawChart(valueButton)
         })
@@ -146,34 +134,24 @@
         valueButton = value;
         var data=[];
         
-        if(value=="G7"){
-            G7list.forEach(function (d) {
+        if(value=="Actual_use"){
                 dataPerm.forEach(function (k) {
-                    if (d == k.ISO)
+                    if (k.Actual_use != "#N/A")
                         data.push(k)
                 })
-
-            })
-        }else if (value == "OECD") {
-            OECDlist.forEach(function (d) {
+        }else if (value == "Approved_applications") {
                 dataPerm.forEach(function (k) {
-                    if (d == k.ISO)
                         data.push(k)
                 })
-
-            })
-        }else{
-            data=dataPerm
-        }
-            
+        }   
 
 
          width = document.getElementById("GDPchart").offsetWidth - margin.left - margin.right;
 
         if (width > 650)
-            height = 360//height = width * mapRatio;
+            height = 450//height = width * mapRatio;
         else
-            height = 360//height = width;
+            height = 450//height = width;
 
         
         d3.selectAll("svg")
@@ -194,11 +172,11 @@
             x.paddingInner(0.5)
 
 
-        data.sort(function (a, b) { return b.data1 - a.data1; });
+        data.sort(function (a, b) { return b[value] - a[value]; });
 
         x.domain(data.map(function (d) { return d.Country; }));
 
-        y.domain([ 0, d3.max(data, function (d) { return parseFloat(d.data1); })]).nice();
+        y.domain([ 0, d3.max(data, function (d) { return parseFloat(d[value]); })]).nice();
        
 
 
@@ -219,53 +197,52 @@
             .call(d3.axisLeft(y).ticks(5).tickFormat(function (d) {
                 return y.tickFormat(20, d3.format(".0f"))(d) + "%"
             }).tickSize(-(width)));
-            
-        GDPsvg.append("g")
-            .selectAll("g")
-            .data(d3.stack().keys(keys)(data))
-            .enter().append("g")
-            .attr("fill", function (d) { return color(d.key); })
-            .selectAll("rect")
-            .data(function (d) { return d; })
+ 
+
+        GDPsvg.selectAll(".bar")
+            .data(data)
             .enter().append("rect")
+            .attr("class", "bar")
+            .attr("x", function (d) { return x(d.Country); })
+            .attr("y", function (d) { return y(d[value]); })
+            .attr("fill", function (d) { return "#00b5cb"; })
             .attr("opacity", function (d) {
-                if (d.data.ISO == "EA17" || d.data.ISO == "OTO" || d.data.ISO == "WLD"  || d.data.ISO == "G20")
+                if (d.ISO == "EA17" || d.ISO == "OTO" || d.ISO == "WLD" || d.ISO == "G20")
                     return 0.6;
                 else
                     return 1;
             })
-            .attr("x", function (d) { return x(d.data.Country); })
-            .attr("y", function (d) {  return y(parseFloat(d[1])); })//y(d[1] for positive values
-            .attr("height", function (d) { return (parseFloat(y(d[0])) - parseFloat(y(d[1]))); }) //remove - in front  for positive values
             .attr("width", x.bandwidth())
-            .on("mouseover", function () { 
-                d3.select(this).attr("opacity",0.2)
+            .attr("height", function (d) { return height-margin.bottom - y(d[value]); })
+            .on("mouseover", function () {
+                d3.select(this).attr("opacity", 0.2)
             })
-            .on("mouseout", function (d) { 
-                
+            .on("mouseout", function (d) {
+
                 d3.select(this)
-                .attr("opacity",function () {
-                    if (d.data.ISO == "EA17" || d.data.ISO == "OTO" || d.data.ISO == "WLD" || d.data.ISO == "G20")
-                        return 0.6;
-                    else
-                        return 1;
-                })
+                    .attr("opacity", function () {
+                        if (d.ISO == "EA17" || d.ISO == "OTO" || d.ISO == "WLD" || d.ISO == "G20")
+                            return 0.6;
+                        else
+                            return 1;
+                    })
 
                 divMap.transition()
                     .duration(100)
                     .style("opacity", 0);
-                 })
+            })
             .on("mousemove", function (d) {
 
                 divMap.transition()
                     .duration(100)
                     .style("opacity", 1);
-                
-                var htmlText
-                if(d.data.Actual_use=="#N/A")
-                    htmlText =  "<b>" + d.data.Country + "</b><br/>&nbsp;Approved applications: <b>" + d.data.data1  + "%</b> <br>&nbsp;Head counts :<b>" + d.data.headcount ;
+
+                var htmlText;
+                if (d.Actual_use == "#N/A")
+                    htmlText = "In <b>" + d.Country + "</b>, " + d.Approved_applications + "% of workers have been approved for job retention schemes, or " + d3.format(",.0f")(parseFloat(d.headcount) * 1000)+ " people in total";
                 else
-                    htmlText = "<b>" + d.data.Country + "</b><br/>&nbsp;Approved applications: <b>" + d.data.data1 + "%</b> <br>&nbsp;Actual use :<b>" + d.data.Actual_use + "%</b>  <br>&nbsp;Head counts :<b>" + d.data.headcount;
+                    htmlText = "In <b>" + d.Country +"</b>, " + d.Actual_use + "% of workers effectively benefited from job retention schemes, while " + d.Approved_applications + "% or "+  d3.format(",.0f")(parseFloat(d.headcount) * 1000) + " people could have in total" ;
+                
 
                 if (event.pageX < width - 75) {
                     divMap.html(htmlText)
@@ -276,8 +253,8 @@
                         .style("left", width - 100 + "px")
                         .style("top", event.pageY + "px");
                 }
-                
-            });
+
+            });;    
 
     }
 
