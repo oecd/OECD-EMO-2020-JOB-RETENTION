@@ -20,7 +20,7 @@
 
     <body>
         <h1>Job retention programmes</h1><br>
-        <h2>As % of dependent employees</h2>
+        <h2>As % of employees</h2>
         <img id="Share" src="img/share.svg" alt="share">
 
     <div class="flex-container" id="Downloadbanner">
@@ -42,6 +42,7 @@
                 </div>
             </div>
         </div>
+        <div id="note" class="source">Note: In this chart "employees" refers to "dependent employees" only, this is employees who work directly for a company and are not self-employed.</div>
     </body>
     <script>
         var dataPerm=[];
@@ -241,7 +242,7 @@
                 if (d.Actual_use == "#N/A")
                     htmlText = "In <b>" + d.Country + "</b>, " + d.Approved_applications + "% of workers have been approved for job retention schemes, or " + d3.format(",.0f")(parseFloat(d.headcount) * 1000)+ " people in total";
                 else
-                    htmlText = "In <b>" + d.Country +"</b>, " + d.Actual_use + "% of workers effectively benefited from job retention schemes, while " + d.Approved_applications + "% or "+  d3.format(",.0f")(parseFloat(d.headcount) * 1000) + " people could have in total" ;
+                    htmlText = "In <b>" + d.Country +"</b>, " + d.Actual_use + "% of workers effectively benefited from job retention schemes, while " + d.Approved_applications + "%, or "+  d3.format(",.0f")(parseFloat(d.headcount) * 1000) + " people, could have in total" ;
                 
 
                 if (event.pageX < width - 75) {
